@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <input type="text" name="" id="">
+    <button onclick="ShowImg()">Viwe Image</button><br>
+    <img src="" alt=""><br>
+    <img src="" alt=""><br>
+
+
+    <select name="" id="" onchange="changeImg(value)">
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECe3a36cWoowF6pY5nQkqesHkKLveImzyfw&s">Ram</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8X-r1s2RcTYphwyv7eodrphZ-sZL9cCL-nw&s">Krishna</option>
+
+
+
+
+    <script>
+        function ShowImg(){
+            let inputData = document.getElementsByTagName('input')[0].value
+            console.log(inputData)
+            document.getElementsByTagName("img")[0].src =inputData;
+        }
+
+        function changeImg(imgSrc){
+            document.getElementsByTagName('img')[1].src = imgSrc
+            document.getElementsByTagName('img')[1].width  = 300
+            document.getElementsByTagName('img')[1].height = 300
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+        }
+
+        .box {
+            width: 100%;
+            text-align: center;
+        }
+
+        input,
+        button {
+            width: 90%;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        button {
+            width: 92%;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <input type="text" placeholder="name" name="">
+            <input type="email" placeholder="Email" name="">
+            <input type="password" placeholder="Password" name="">
+            <input type="number" placeholder="Contact" name="">
+            <input type="text" placeholder="image" name="">
+            <input type="text" placeholder="Address" name="">
+            <input type="date" placeholder="DOB" name="">
+
+            <select name="" id="" onchange="gender()">
+                <option value="male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button onclick="SubmitData()">Submit</button>
+        </div>
+        <div class="box">
+            <img src="" alt="profile">
+            <h1>Name</h1>
+            <h1>Email</h1>
+            <h1>Password</h1>
+            <h1>Contact</h1>
+            <h1>Address</h1>
+            <h1>Date Of Birth</h1>
+            <h1>Gender</h1>
+
+
+        </div>
+
+    </section>
+    
+    
+    <script>
+        function gender() {
+    
+            let gendervalue = document.getElementsByTagName("select")[0].value
+        
+            document.getElementsByTagName("h1")[6].innerText = gendervalue
+        }
+
+        function SubmitData() {
+            let name = document.getElementsByTagName("input")[0].value
+            let email = document.getElementsByTagName("input")[1].value
+            let password = document.getElementsByTagName("input")[2].value
+            let number = document.getElementsByTagName("input")[3].value
+            let image = document.getElementsByTagName("input")[4].value
+            let Address = document.getElementsByTagName("input")[5].value
+            let dob = document.getElementsByTagName("input")[6].value
+
+            document.getElementsByTagName("img")[0].src = image
+            document.getElementsByTagName("h1")[0].innerText = name
+            document.getElementsByTagName("h1")[1].innerText = email
+            document.getElementsByTagName("h1")[2].innerText = password
+            document.getElementsByTagName("h1")[3].innerText = number
+            document.getElementsByTagName("h1")[4].innerText = Address
+            document.getElementsByTagName("h1")[5].innerText = dob
+            // gender()
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
